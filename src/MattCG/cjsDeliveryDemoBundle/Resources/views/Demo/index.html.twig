@@ -1,0 +1,12 @@
+{% extends "cjsDeliveryDemoBundle::layout.html.twig" %}
+
+{% block title "Symfony - Demos" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1 class="title">Available demos</h1>
+    <ul id="demo-list">
+        <li><a href="{{ path('_cjsdeliverydemo_hello', {'name': 'World'}) }}">Hello World</a></li>
+    </ul>
+{% endblock %}

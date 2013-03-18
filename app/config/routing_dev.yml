@@ -11,6 +11,11 @@ _demo:
     type:     annotation
     prefix:   /demo
 
+_cjsdeliverydemo:
+    resource: "@cjsDeliveryDemoBundle/Controller/DemoController.php"
+    type:     annotation
+    prefix:   /cjsdeliverydemo
+
 _wdt:
     resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
     prefix:   /_wdt
