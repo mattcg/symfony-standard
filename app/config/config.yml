@@ -1,5 +1,4 @@
 imports:
-    - { resource: parameters.yml }
     - { resource: security.yml }
 
 framework:
@@ -23,6 +22,10 @@ twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
 
+cjs_delivery:
+    calls:
+        - [ setMinifyIdentifiers, [ false ] ]
+
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%
@@ -33,13 +36,13 @@ assetic:
         cssrewrite: ~
         cjs_delivery:
             resource: "%kernel.root_dir%/../src/MattCG/cjsDeliveryBundle/Resources/config/services.xml"
-            #resource: "assetic.xml"
-            minify_identifiers: true
-            minifyIdentifiers: true
-            minifyidentifiers: true
-            arguments: ["true"]
-            calls:
-                - [ setMinifyIdentifiers, [ "true" ] ]
+#             #resource: "assetic.xml"
+#             minify_identifiers: true
+#             minifyIdentifiers: true
+#             minifyidentifiers: true
+#             arguments: ["true"]
+#             calls:
+#                 - [ setMinifyIdentifiers, [ "true" ] ]
 
 # Doctrine Configuration
 doctrine:

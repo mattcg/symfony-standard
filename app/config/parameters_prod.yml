@@ -12,3 +12,4 @@ parameters:
   locale: en
   secret: 63bc858210f1b45c929ad15e24a7cb606e8dde94
   database_path: /usr/local/var/mysql/mysql.sock
+  matt_cg.cjs_delivery_filter.minify_identifiers: true
