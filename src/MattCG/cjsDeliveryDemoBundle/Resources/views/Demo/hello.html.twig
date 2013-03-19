@@ -3,7 +3,15 @@
 {% block title "Hello " ~ name %}
 
 {% block content %}
-    <h1>Hello {{ name }}!</h1>
-{% endblock %}
+	<h1>Hello <span id="name">{{ name }}</span>!</h1>
+	<hr>
+	<p>If the demo worked, you should see your name repeated in rot13 below.</p>
+	<p id="name-rot13"></p>
 
-{% set code = code(_self) %}
+	{% javascripts filter="cjs_delivery" output="/js/compiled.js"
+		'@cjsDeliveryDemoBundle/Resources/js/hello/main.js'
+		'@cjsDeliveryDemoBundle/Resources/js/just-log.js'
+	%}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}

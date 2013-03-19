@@ -1,0 +1,3 @@
+_cjsdeliverydemo:
+    pattern:  /
+    defaults: { _controller: cjsDeliveryDemoBundle:Demo:hello }

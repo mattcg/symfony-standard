@@ -11,20 +11,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class DemoController extends Controller
 {
-    /**
-     * @Route("/", name="_cjsdeliverydemo")
-     * @Template()
-     */
-    public function indexAction()
-    {
-        return array();
-    }
+
 
     /**
-     * @Route("/hello/{name}", name="_cjsdeliverydemo_hello")
+     * @Route("/hello/{name}", name="_cjsdeliverydemo")
      * @Template()
      */
-    public function helloAction($name)
+    public function helloAction($name = 'Anonymous')
     {
         return array('name' => $name);
     }
